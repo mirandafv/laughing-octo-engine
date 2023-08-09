@@ -12,7 +12,17 @@
 7. You will see the number of pending, passing and failing tests. 100% of passing tests is equal to max score for the task
 
 ---
+type AssertionError<T = {}> = Error & T & {
+    showDiff: boolean;
+};
 
+interface AssertionErrorConstructor {
+    new<T = {}>(message: string, props?: T, ssf?: Function): AssertionError<T>;
+}
+
+declare const AssertionError: AssertionErrorConstructor;
+
+export = AssertionError;
 #### Troubleshooting
 - If you catch error like [this](https://user-images.githubusercontent.com/17920285/158375305-f54d87fa-6f42-402f-af25-10b233d98cf9.png) you can try to make `npm install -g node-gyp`
 
