@@ -13,6 +13,19 @@ function convertArrayToList(arr) {
       node.next = acc;
       return node;
     }
+emoveKFromList } = require('../src/remove-from-list.js');
+
+it.optional = testOptional;
+
+Object.freeze(assert);
+
+function convertArrayToList(arr) {
+  return arr.reverse().reduce((acc, cur) => {
+    if (acc) {
+      const node = new ListNode(cur);
+      node.next = acc;
+      return node;
+    }
 
     return new ListNode(cur);
   }, null);
