@@ -1,3 +1,16 @@
+emoveKFromList } = require('../src/remove-from-list.js');
+
+it.optional = testOptional;
+
+Object.freeze(assert);
+
+function convertArrayToList(arr) {
+  return arr.reverse().reduce((acc, cur) => {
+    if (acc) {
+      const node = new ListNode(cur);
+      node.next = acc;
+      return node;
+    }
 const { assert } = require('chai');
 const { testOptional, ListNode } = require('../extensions/index.js');
 const { removeKFromList } = require('../src/remove-from-list.js');
